@@ -65,7 +65,7 @@ function makeHtmlBoard() {
 
 function findSpotForCol(x) {
   // TODO: write the real version of this, rather than always returning 0
-  for(let y = HEIGHT-1; y>0; y--){
+  for(let y = HEIGHT-1; y>=0; y--){
     if (!board[y][x]){
       return y; 
     }
@@ -81,6 +81,8 @@ function placeInTable(y, x) {
   const piece = document.createElement('div');
   piece.classList.add('piece');
   piece.classList.add(`p${currPlayer}`);
+  piece.classList.add('fall');
+
 
   const location = document.getElementById(`${y}-${x}`);
   location.append(piece);
