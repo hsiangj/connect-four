@@ -5,8 +5,8 @@
  * board fills (tie)
  */
 
-let WIDTH = 7; //x or column
-let HEIGHT = 6; //y or row
+let WIDTH = 7; //x or row
+let HEIGHT = 6; //y or column
 
 let currPlayer = 1; // active player: 1 or 2
 let board = []; // array of rows, each row is array of cells  (board[y][x])
