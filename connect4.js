@@ -40,8 +40,8 @@ function makeHtmlBoard() {
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
 
-  //for each column(x), create a cell<td> and append to the top<tr>
-  for (var x = 0; x < WIDTH; x++) {
+  //for each width(x), create a cell<td> and append to <tr>
+  for (let x = 0; x < WIDTH; x++) {
     const headCell = document.createElement("td");
     headCell.setAttribute("id", x);
     top.append(headCell);
@@ -50,9 +50,9 @@ function makeHtmlBoard() {
 
   // TODO: add comment for this code
   //create cells in main part of the board 
-  for (var y = 0; y < HEIGHT; y++) {
+  for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
-    for (var x = 0; x < WIDTH; x++) {
+    for (let x = 0; x < WIDTH; x++) {
       const cell = document.createElement("td");
       cell.setAttribute("id", `${y}-${x}`);
       row.append(cell);
