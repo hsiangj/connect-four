@@ -102,7 +102,7 @@ setTimeout(() =>{
 function handleClick(evt) {
   // get x from ID of clicked cell
   let x = +evt.target.id;
-  console.log(x);
+  
   // get next spot in column (if none, ignore click)
   let y = findSpotForCol(x);
   if (y === null) {
